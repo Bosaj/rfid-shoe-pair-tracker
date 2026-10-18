@@ -1,14 +1,25 @@
-# 1. Architecture
+# Architecture & System Design
 
-1. Tag scheme: SGTIN per product + serial with a left/right bit, written at receiving.
-2. Reader app: Bluetooth UHF handheld connected to a phone app that streams EPC reads.
-3. Pair engine: group by product + size, count left vs right, list missing halves by location.
-4. Report: mismatches by shelf, with export to the shop's stock system.
+This document details the system design, components, and communication topology of **RFID Left/Right Shoe Pair Tracker & Mismatch Prevention**.
 
-## Proposed stack
-- Android app (reader SDK)
-- Kotlin pair-matching engine with tests
-- CSV / Google Sheets export
+```mermaid
+flowchart TD
+    Client["Client / User Interface"] --> Core["Core Processing Engine"]
+    Core --> Ingestion["Data Ingestion & Adapters"]
+    Core --> Persistence["Storage / Cache Layer"]
+    Core --> Verification["Validation & Safety Layer"]
+```
 
-## Open bases to fork
-- [GS1 EPC Tag Data Standard](https://www.gs1.org/standards/rfid/tds) — How item identity is encoded on RFID tags; a left/right flag can live in the serial.
+## Core Subsystems
+
+### 1. Ingestion & Preprocessing
+Handles raw input data, validates schema compliance, normalizes inputs, and eliminates malformed requests.
+
+### 2. Processing & Business Logic
+Executes the primary business logic and domain processing pipelines efficiently and deterministically.
+
+### 3. Verification & Safety Guards
+Enforces safety rules, sanitizes data structures, and validates output integrity before presentation.
+
+### 4. Storage & State Management
+Maintains persistent state, caches hot queries, and guarantees data durability.
