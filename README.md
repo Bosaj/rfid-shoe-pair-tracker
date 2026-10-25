@@ -3,7 +3,7 @@
 > Count left and right shoes separately with RFID so store staff see broken pairs and stock mismatches.
 
 **Status:** pre-alpha scaffold (no code yet). **Feasibility rating:** 2/10 as a new idea — commercial retail RFID products exist; value is in a small-retailer workflow.
-**Idea:** #08 in the owner's ideas backlog. **Author:** Oussama EL HADJI. Part of the Bosaj ideas portfolio (sibling repo: `dual_portfolio_hub`).
+**Idea:** #08 in the owner's ideas backlog. **Author:** Oussama Elhadji (`@Bosaj`) <oussousselhadji@gmail.com>.
 
 ---
 
@@ -56,6 +56,7 @@ This repo is a **scaffold**: README + standard files, no implementation yet. If 
 # nothing to run yet — this is a scaffold.
 ```
 
-## License
+## 📄 License
+**Proprietary & Commercial Software License** — All Rights Reserved © 2026 Oussama Elhadji (`@Bosaj`) <[oussousselhadji@gmail.com](mailto:oussousselhadji@gmail.com)>.
 
-[MIT](LICENSE) — © 2026 Oussama EL HADJI
+Unauthorized copying, distribution, resale, or reverse engineering is strictly prohibited. See [LICENSE](LICENSE) for full legal terms.
